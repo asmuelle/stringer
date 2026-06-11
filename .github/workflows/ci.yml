@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: stringer
+          POSTGRES_PASSWORD: stringer
+          POSTGRES_DB: stringer_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U stringer"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DATABASE_URL: postgres://stringer:stringer@localhost:5432/stringer_test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up just
+        uses: extractions/setup-just@v3
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - name: Check bootstrap status
+        id: bootstrap
+        run: |
+          if [ -f package.json ]; then
+            echo "bootstrapped=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "bootstrapped=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::package.json not found — docs-only scaffold, skipping install/build (see DESIGN.md M0)."
+          fi
+
+      - name: Install dependencies
+        if: steps.bootstrap.outputs.bootstrapped == 'true'
+        run: pnpm install --frozen-lockfile
+
+      - name: Run CI suite
+        if: steps.bootstrap.outputs.bootstrapped == 'true'
+        run: just ci

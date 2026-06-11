@@ -1,0 +1,262 @@
+/* Stringer — wire-desk editorial system (DESIGN.md visual direction). */
+
+:root {
+  /* Palette: warm newsprint, near-black ink, wire red only for deltas/novelty. */
+  --color-surface: oklch(96% 0.01 90);
+  --color-surface-raised: oklch(98% 0.008 90);
+  --color-ink: oklch(20% 0.01 60);
+  --color-ink-muted: oklch(42% 0.012 70);
+  --color-rule: oklch(82% 0.012 85);
+  --color-wire-red: oklch(55% 0.19 25);
+  --color-degraded-amber: oklch(68% 0.13 75);
+
+  /* Typography: editorial serif for prose, mono for citation metadata. */
+  --font-serif: 'Source Serif 4', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-deck: clamp(1.125rem, 1rem + 0.6vw, 1.5rem);
+  --text-headline: clamp(1.5rem, 1.1rem + 2vw, 2.5rem);
+  --text-masthead: clamp(2.25rem, 1.5rem + 3.5vw, 4rem);
+  --text-meta: 0.78rem;
+
+  --space-hairline: 1px;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+
+  --measure: 44rem;
+
+  --duration-reveal: 300ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-surface);
+  /* Subtle paper grain: two offset hairline gradients, no images. */
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 2px, oklch(0% 0 0 / 0.012) 2px 3px),
+    repeating-linear-gradient(90deg, transparent 0 3px, oklch(0% 0 0 / 0.008) 3px 4px);
+  color: var(--color-ink);
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  line-height: 1.55;
+}
+
+.desk {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-4) var(--space-12);
+}
+
+/* ── Masthead ─────────────────────────────────────────────── */
+
+.masthead {
+  border-bottom: 3px double var(--color-ink);
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.masthead-kicker {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  margin: 0 0 var(--space-2);
+}
+
+.masthead h1 {
+  font-size: var(--text-masthead);
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.masthead-deck {
+  font-size: var(--text-deck);
+  font-style: italic;
+  color: var(--color-ink-muted);
+  margin: var(--space-3) 0 0;
+  max-width: 36rem;
+}
+
+.dateline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-6);
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-ink-muted);
+  margin-top: var(--space-4);
+}
+
+/* ── Brief items ──────────────────────────────────────────── */
+
+.brief-intro {
+  font-style: italic;
+  color: var(--color-ink-muted);
+  margin: 0 0 var(--space-8);
+}
+
+.brief-item {
+  position: relative;
+  border-top: var(--space-hairline) solid var(--color-rule);
+  padding: var(--space-6) 0 var(--space-6) var(--space-4);
+  animation: reveal var(--duration-reveal) var(--ease-out-expo) both;
+}
+
+/* Wire-red delta bar: novelty marker only, never decoration. */
+.brief-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: var(--space-6);
+  bottom: var(--space-6);
+  width: 3px;
+  background: var(--color-wire-red);
+}
+
+.brief-item h3 {
+  font-size: var(--text-headline);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--space-2);
+}
+
+.novelty-evidence {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-wire-red);
+  margin: 0 0 var(--space-3);
+}
+
+.why-care {
+  margin: 0 0 var(--space-4);
+}
+
+.pull-quote {
+  margin: 0 0 var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface-raised);
+  border-left: 2px solid var(--color-ink);
+}
+
+.pull-quote p {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-deck);
+  line-height: 1.35;
+}
+
+.citation {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-ink-muted);
+  overflow-wrap: anywhere;
+}
+
+.citation .verified-mark {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.angles {
+  margin: var(--space-4) 0 0;
+  padding: 0 0 0 var(--space-4);
+}
+
+.angles-label,
+.callbacks h2,
+.run-ledger h2 {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  margin: 0 0 var(--space-2);
+}
+
+.angles li {
+  margin-bottom: var(--space-2);
+}
+
+/* ── Callbacks ────────────────────────────────────────────── */
+
+.callbacks {
+  border-top: var(--space-hairline) solid var(--color-rule);
+  padding: var(--space-6) 0;
+}
+
+.callbacks li {
+  margin-bottom: var(--space-2);
+}
+
+.callback-ref {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-ink-muted);
+}
+
+/* ── Coverage footer & run ledger ─────────────────────────── */
+
+.coverage {
+  border-top: 3px double var(--color-ink);
+  margin-top: var(--space-8);
+  padding-top: var(--space-4);
+}
+
+.coverage-line {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  margin: 0 0 var(--space-2);
+}
+
+.degraded {
+  color: var(--color-degraded-amber);
+}
+
+.run-ledger {
+  margin-top: var(--space-6);
+}
+
+.run-ledger table {
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+}
+
+.run-ledger td,
+.run-ledger th {
+  text-align: left;
+  padding: var(--space-2) var(--space-6) var(--space-2) 0;
+  border-top: var(--space-hairline) solid var(--color-rule);
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brief-item {
+    animation: none;
+  }
+}

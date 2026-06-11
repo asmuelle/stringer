@@ -1,0 +1,16 @@
+{
+  "operator": {
+    "id": "op_demo",
+    "name": "Brussels Decoded",
+    "timezone": "Europe/Berlin"
+  },
+  "beat": {
+    "id": "beat_eu_ai",
+    "operatorId": "op_demo",
+    "name": "EU AI regulation",
+    "thresholds": { "tDup": 0.15, "tNovel": 0.55 },
+    "nightlyBudgetUsd": 0.5
+  },
+  "briefDate": "2026-06-10",
+  "wiki": "EU AI regulation beat wiki — entities: European Commission, AI Office, CEN-CENELEC. Timeline: AI Act GPAI obligations staged through August 2026; code of practice slipping. Open questions: harmonised standards delay, FRIA templates, enforcement powers split between Brussels and member states."
+}

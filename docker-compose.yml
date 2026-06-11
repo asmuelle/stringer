@@ -1,0 +1,16 @@
+# Local Postgres 16 + pgvector for integration work (see TOOLS.md > Local Services).
+# Not required for the M1 fixture-driven test suite — `just test` runs without it.
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: stringer
+      POSTGRES_PASSWORD: stringer
+      POSTGRES_DB: stringer
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:

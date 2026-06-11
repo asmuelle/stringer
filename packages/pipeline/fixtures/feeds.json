@@ -1,0 +1,47 @@
+{
+  "s_fedreg": [
+    {
+      "url": "https://www.federalregister.gov/documents/2026/06/09/nist-incident-reporting",
+      "title": "NIST opens comments on incident reporting framework",
+      "publishedAt": "2026-06-09T14:00:00Z",
+      "text": "NIST has opened a sixty day comment period on a generative model incident reporting framework for critical infrastructure operators.\nUtilities and hospitals would file standardized reports within seventy two hours of a qualifying malfunction.",
+      "previousText": "NIST scheduled listening sessions on a generative model incident reporting framework for critical infrastructure operators."
+    }
+  ],
+  "s_eurlex": [
+    {
+      "url": "https://eur-lex.europa.eu/notice/code-of-practice-timeline",
+      "title": "Code of practice timeline slips again",
+      "publishedAt": "2026-06-09T16:30:00Z",
+      "text": "Brussels now expects the AI Act code of practice to slip to August, with the Commission citing member-state wrangling and fresh industry lobbying over enforcement powers."
+    }
+  ],
+  "s_wire": [
+    {
+      "url": "https://techpolicywire.example/2026/06/09/ai-act-final-text-syndicated",
+      "title": "Wire recap: final AI Act text keeps GPAI obligations",
+      "publishedAt": "2026-06-09T20:00:00Z",
+      "text": "The Parliament's final AI Act text keeps the general-purpose model obligations and stages compliance deadlines through August 2026."
+    }
+  ],
+  "s_court": [
+    {
+      "url": "https://curia.example/docket/data-act-cloud-switching",
+      "title": "CJEU expedites Data Act cloud-switching challenge",
+      "publishedAt": "2026-06-09T11:00:00Z",
+      "text": "The CJEU agreed to hear the challenge to the Data Act cloud-switching provisions on an expedited schedule."
+    }
+  ],
+  "s_govinfo": [
+    {
+      "url": "https://api.govinfo.gov/collections/status",
+      "title": "GovInfo bulk data status",
+      "publishedAt": "2026-06-09T06:00:00Z",
+      "text": "GovInfo bulk data status page reports no new bulk data products this week."
+    }
+  ],
+  "s_aiweekly": [],
+  "s_lobby": [],
+  "s_courtwatch": [],
+  "s_ep_press": []
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "a1",
+    "url": "https://brusselsdecoded.example/p/ai-act-final-text",
+    "title": "The final AI Act text, decoded",
+    "publishedAt": "2026-03-03T08:00:00Z",
+    "text": "The Parliament's final AI Act text keeps the general-purpose model obligations and stages compliance deadlines through August 2026."
+  },
+  {
+    "id": "a2",
+    "url": "https://brusselsdecoded.example/p/code-of-practice-slips",
+    "title": "Code of practice slips past May",
+    "publishedAt": "2026-04-14T08:00:00Z",
+    "text": "Brussels signaled the AI Act code of practice will slip past May, with the Commission blaming member-state wrangling over enforcement powers."
+  },
+  {
+    "id": "a3",
+    "url": "https://brusselsdecoded.example/p/digital-omnibus",
+    "title": "Reading the Digital Omnibus",
+    "publishedAt": "2026-05-02T08:00:00Z",
+    "text": "Our read on the Digital Omnibus: the Commission wants one horizontal text to patch GDPR, the Data Act and the AI Act at once."
+  },
+  {
+    "id": "a4",
+    "url": "https://brusselsdecoded.example/p/fria-template",
+    "title": "Why the FRIA template matters",
+    "publishedAt": "2026-05-20T08:00:00Z",
+    "text": "Fundamental rights impact assessments will decide how deployers document high-risk use, and the template fight is quietly the whole ballgame."
+  },
+  {
+    "id": "a5",
+    "url": "https://brusselsdecoded.example/p/harmonised-standards",
+    "title": "The standard-essential question",
+    "publishedAt": "2026-05-28T08:00:00Z",
+    "text": "CEN-CENELEC harmonised standards are late, and the presumption of conformity for high-risk providers hangs entirely on them."
+  },
+  {
+    "id": "a6",
+    "url": "https://brusselsdecoded.example/p/edpb-legitimate-interest",
+    "title": "EDPB guidance reshapes training data",
+    "publishedAt": "2026-06-01T08:00:00Z",
+    "text": "EDPB guidance on legitimate interest quietly reshapes how model training data can be collected in Europe."
+  }
+]

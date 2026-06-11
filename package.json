@@ -1,0 +1,28 @@
+{
+  "name": "stringer",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.25.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @stringer/web dev",
+    "test": "vitest run",
+    "e2e": "pnpm --filter @stringer/web e2e",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "typecheck": "pnpm -r run typecheck",
+    "build": "pnpm --filter @stringer/web build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.10.0",
+    "@vitest/coverage-v8": "^3.2.0",
+    "eslint": "^9.30.0",
+    "prettier": "^3.6.0",
+    "typescript": "^5.9.0",
+    "typescript-eslint": "^8.40.0",
+    "vitest": "^3.2.0"
+  }
+}

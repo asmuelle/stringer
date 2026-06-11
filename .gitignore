@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Builds
+.next/
+dist/
+out/
+*.tsbuildinfo
+.turbo/
+
+# Tests
+coverage/
+playwright-report/
+test-results/
+blob-report/
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+
+# Database / local services
+*.sqlite
+postgres-data/
+
+# Inngest local state
+.inngest/
+
+# OS / editor noise
+.DS_Store
+*.log
+.idea/
+.vscode/*
+!.vscode/extensions.json

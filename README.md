@@ -1,0 +1,87 @@
+# Stringer
+
+> An always-on research desk for paid-newsletter operators: living beat wikis plus a daily citation-pinned delta brief, deduplicated against everything you have already published — turning 20 hours of weekly research into 2 without ever pitching a story you already covered.
+
+**Category:** LLM wiki / auto-research (living documents + delta alerts, à la Karpathy) · **Status:** 🟡 Tier 2 — strong economics, must outrun ChatGPT/Perplexity feature-shipping
+
+## Scorecard
+
+| Metric | Score |
+|---|---|
+| Rank (of 12 finalists) | #9 |
+| Combined score | 2.2 |
+| Monetization potential (1-10) | 7 |
+| Feasibility (1-10) | 5 |
+| Defensible vs platform features | No |
+| Skeptic verdict | weakened |
+
+## Concept
+
+An always-on research desk for paid-newsletter operators: living beat wikis plus a daily citation-pinned delta brief, deduplicated against everything you have already published — turning 20 hours of weekly research into 2 without ever pitching a story you already covered.
+
+## Target User & Payer
+
+Solo and small-team paid-newsletter operators on Substack/Beehiiv/Ghost in business, finance, policy, and tech — from the 45+ newsletters above $1M ARR down to $5-50K/mo operators. The writer pays personally because research hours are their core cost of goods and their byline rides on every sourced claim.
+
+## Auto-Research Mechanic (the living document + delta engine)
+
+Onboarding ingests the writer's full archive to build an 'already-covered' memory. The operator defines beats ('EU AI regulation', 'fintech infra M&A'); the agent maintains a living beat wiki — entities, narrative timelines, open questions — updated overnight via batch from 50-200 sources per beat (RSS, primary feeds, filings, earnings transcripts, niche forums, X lists) with diff-based ingestion. Flash/Haiku triage scores each item for novelty against the archive AND all prior briefs, with slop filtering and source-quality scoring. Each morning a delta brief lands: what changed, why this publication's readers care, three suggested angles, pull-quotes with pinned quote + URL + timestamp, and callbacks ('you covered this March 3 — the new development is X'). One-click pulls any wiki section with sources into a draft; the archive doubles as a fact-checked back-catalog and corrections log.
+
+## Product Surface
+
+Daily email/Slack delta brief (the operator's native medium) + web workspace for beat wikis and draft pulls, with one-click export to Notion/Google Docs/Substack drafts. Overnight latency is irrelevant — exactly what makes batch economics work.
+
+## Why Now (2026 timing)
+
+Substack's paid boom concentrated in exactly the business/finance/politics/tech verticals where research is heaviest; ChatGPT Pulse validated the morning-brief format but is $200/mo, mobile-only, lifestyle-skewed, with no export or citation workflow; 'AI slop' as 2025 Word of the Year means provenance-rich sourcing is a differentiator writers pass through to paying readers; picks-and-shovels sells to curators instead of competing with them.
+
+## Proposed Monetization
+
+$49/mo solo (5 beats), $99/mo pro (15 beats, archive-aware dedup, transcript sources), $249/mo desk (team seats, API, white-label public citations page). Direct ROI: a writer worth $50-100/hr saving 10+ hrs/week gets 20x payback; these are revenue businesses (8.4M paid Substack subscriptions, +68% YoY) that already buy tooling. COGS ~$10-25/operator/mo with batch + cache + cheap routing.
+
+## Competition & Gap
+
+Feedly's real monitoring tier ($14.4-19.2K/yr enterprise MI), Particle ($2.99 consumer catch-up), generic ChatGPT/Perplexity (one-shot, no beat memory, 37% citation misattribution — career-ending under your own byline), human VAs at $1-3K/mo.
+
+## Claimed Moat
+
+Archive-aware novelty is the lock-in: deltas are computed against a private corpus — everything the writer published plus everything already shown — that no horizontal player ingests; leaving means losing months of dedup memory and beat state. Workflow embedding in the publishing loop (draft pulls, corrections log) makes it the system of record for the publication's facts. Distribution self-reinforces: 'researched with Stringer' citation pages in front of millions of readers are a built-in referral channel, and OpenAI/Perplexity won't build per-writer corpus ingestion for a niche of tens of thousands.
+
+---
+
+# Evaluation (multi-agent adversarial review)
+
+## Monetization Analysis — score 7/10
+
+Stringer scores a 7: a solid, well-shaped niche with a credible wedge but an unproven budget line and a capped ceiling on the stated ICP. Strengths: (a) the payer is a revenue business, not a hobbyist — Substack alone crossed 8.4M paid subscriptions in Q1 2026 (+68% YoY), with ~45-50 newsletters above $1M ARR concentrated in exactly the business/finance/politics/tech verticals named; finance newsletters charge $30-100/mo (some $500-1,000/mo), so a $49-249/mo tool is a rounding error against $50-100/hr research labor or a $1-3K/mo VA. (b) The 'already pays for inferior alternative' test is partially passed: operators already pay for Perplexity Pro ($20/mo), ChatGPT ($20-200/mo), Feedly Pro+ (~$12/mo), transcription, and ESPs — but almost nobody in this segment pays $50-250/mo specifically for research monitoring today; Feedly's real monitoring tier ($1,600-2,400/mo) is bought by corporates, not writers. So the price point is plausible-but-unproven, which caps the score below 8. (c) Churn dynamics are better than typical monitoring tools: beats are ongoing (you never feel 'caught up' on EU AI regulation), and archive-aware dedup memory is a genuine accumulating switching cost — but the underlying customer base has high mortality (sub-$5K/mo newsletters quit constantly), so expect 4-7% monthly logo churn at the solo tier regardless of product quality. (d) Expansion is the weakest leg: solo writers add zero seats; expansion is limited to beat-count and tier upgrades, and the desk-tier team TAM is small. Realistic SAM math: maybe 8-15K operators earning $5K+/mo across Substack/Beehiiv/Ghost in research-heavy verticals; 10% penetration at ~$90 blended ARPU is roughly $1M ARR — a great indie/seed business, not venture-scale without expanding the ICP to analysts, PR, indie journalists, or micro-research desks (where Meltwater/Feedly/Brand24 already fight). Competitive pressure is real but manageable: ChatGPT Pulse ($200/mo Pro, mobile-only, no export/citation workflow, planned rollout to $20 Plus users) validates the daily-brief format while commoditizing the generic version — Stringer's defensibility rests entirely on per-writer corpus ingestion, citation pinning, and publish-loop embedding, which horizontals genuinely are unlikely to build for tens of thousands of users. Score lands at 7: clear wedge, willing payer, real moat mechanic, but unproven price point, weak seat expansion, and a niche ceiling.
+
+## Recommended Revenue Model
+
+Keep the three-tier structure but tune it: $49/mo Solo (5 beats), $119/mo Pro (15 beats, archive dedup, transcripts — raise from $99; the buyer comparing against a $1-3K/mo VA is price-insensitive between 99 and 119), $299/mo Desk (seats, API, citations page), and add a $499-749/mo Institutional tier for finance newsletters needing filings/earnings-transcript beats — that segment already charges readers $500-1,000/mo and will pay it. Land motion: free archive ingestion + 14-day trial so the dedup memory (the switching cost) exists before the first invoice; push annual prepay at 2 months free to blunt the 4-7%/mo churn endemic to creator SaaS. Expansion lever is beats, not seats: meter beats per tier and make adding a beat one click. Target blended ARPU ~$110-130. Unit economics work: claimed COGS of $10-25/operator/mo against $49-299 pricing gives 75-90% gross margin, consistent with batch/overnight inference. Realistic trajectory: 500 customers / ~$700K ARR proves the wedge in newsletters; getting past $3-5M ARR requires widening to indie journalists, substack-style analysts, boutique research shops, and PR/comms solos — priced under Feedly MI's $1,600/mo floor, which leaves a large unserved gap between $12/mo prosumer Feedly and $1,600/mo enterprise Feedly that Stringer can own at $119-499.
+
+## Market Evidence (live web research, June 2026)
+
+Market size: Substack crossed 8.4M paid subscriptions in Q1 2026, up 68% from 5M in March 2025; 50,000 creators earn money on the platform, ~50 above $1M, and the ~45 newsletters above $1M ARR cluster in business, finance, politics, tech, economics — exactly Stringer's target verticals. Finance newsletters price $30-100/mo with institutional ones at $500-1,000/mo, confirming these operators run real revenue businesses ([Backlinko Substack stats](https://backlinko.com/substack-users), [TheWorldData](https://theworlddata.com/substack-statistics-and-facts/), [Sacra](https://sacra.com/c/substack/), [BestWriting](https://bestwriting.com/substack-statistics)). Pricing ladder evidence: Feedly Market Intelligence runs $1,600/mo (Standard, 100 AI feeds, 10 seats) to $2,400/mo (Advanced), billed annually — confirming the candidate's claimed $14.4-19.2K/yr enterprise comp and proving monitoring willingness-to-pay at the corporate level ([Feedly MI pricing](https://feedly.com/market-intelligence/pricing), [Capterra](https://www.capterra.com/p/10019968/Feedly-Market-Intelligence/)). Mid-market monitoring sits at Awario $24/mo, Mention $41/mo, Brand24 $79/mo, Prowly $119/mo, with Meltwater/Brandwatch at $1,000+/mo custom — there is a visible gap between ~$80/mo prosumer tools and $1,600/mo enterprise MI ([Brand24 roundup](https://brand24.com/blog/media-monitoring-tools/), [DeepClick comparison](https://deepclick.com/resources/blog/social-media-monitoring-tools-pricing-comparison-2026/)). Competitive validation: ChatGPT Pulse confirmed as a $200/mo Pro-plan feature, mobile-only, 5-10 generic daily reports, no export or citation workflow, with planned rollout to $20/mo Plus users — validating the morning-brief format while signaling the generic version will be commoditized ([TechCrunch](https://techcrunch.com/2025/09/25/openai-launches-chatgpt-pulse-to-proactively-write-you-morning-briefs/), [OpenAI](https://openai.com/index/introducing-chatgpt-pulse/)). Perplexity Pro at $20/mo (Enterprise $34/seat) anchors generic AI research pricing low, which is the main trial-friction risk for a $49-119/mo product.
+
+## Comparables
+
+- Feedly Market Intelligence — $1,600/mo Standard, $2,400/mo Advanced, billed annually ($19.2-28.8K/yr); the enterprise monitoring price ceiling
+- Feedly Pro/Pro+ — ~$7-12/mo prosumer RSS monitoring; the low anchor for individual writers
+- ChatGPT Pro with Pulse — $200/mo; 5-10 generic daily morning briefs, mobile-only, no export/citation workflow; rollout to $20/mo Plus planned
+- Perplexity — Pro $20/mo, Enterprise $34/seat/mo; cited one-shot research, no beat memory or archive dedup
+- Brand24 — from $79/mo; Mention Solo $41/mo; Awario $24/mo; Prowly $119/mo — mid-market media monitoring ladder
+- Meltwater / Brandwatch / Talkwalker — custom quotes, typically $1,000+/mo enterprise media intelligence
+- Human VA/researcher — $1-3K/mo, the manual alternative Stringer displaces
+- Substack platform economics (payer health) — 8.4M paid subs Q1 2026 (+68% YoY), $45M platform revenue 2025 via 10% take, ~45-50 newsletters >$1M ARR
+
+## Adversarial Review — strongest case AGAINST (verdict: weakened)
+
+The core moat claim is false: a newsletter writer's archive is PUBLIC RSS, not a private corpus — any horizontal player (Perplexity Spaces, ChatGPT connectors, Gemini scheduled research) can re-ingest it in an afternoon, so the only truly proprietary state is 'what we already showed you,' worth weeks of switching cost, not months. The Pulse wedge is already closing: OpenAI has publicly committed to bringing Pulse to web and the $20 Plus tier, and all four labs ship scheduled tasks + connectors, capturing the casual majority within 12 months and leaving only a hardcore niche of low-thousands of viable operators (a $3-10M ARR ceiling even at heroic penetration). Data access has a fatal scissors: the sources that differentiate a finance/policy writer — Politico Pro, The Information, Bloomberg, X lists, licensed transcripts — are exactly what Cloudflare default-blocking (live since July 2025, 2.5M+ sites opted out, pay-per-crawl 402s), $200/mo-for-15K-reads X API pricing, and ToS/CFAA exposure put out of reach; the shippable product monitors the free commodity layer where the writer least needs help, so the version with honest $10-25 COGS is the version that doesn't justify $99/mo, and the version that justifies $99/mo has $60-150+ COGS. Trust is asymmetrically fragile: citation precision is fixable via quote-pinning, but the product's actual promises — novelty ('you haven't covered this') and completeness ('we watched your beat overnight') — require ~99% recall on major beat events across 200 heterogeneous, partially blocked sources, which no 2026 pipeline achieves and, worse, neither vendor nor customer can measure; a false-novel flag gets the writer dunked for re-pitching old news, a missed signal gets them scooped on their own beat precisely because they cut the 18 hours that were their safety margin, so rational writers keep scanning manually for months (product saves ~0 hours) and one miss resets trust. The 'researched with Stringer' distribution loop is inverted — in the AI-slop backlash the pitch itself cites, paid-newsletter writers' brand IS human curation, so they will hide, not advertise, agent-assisted research. And for top-decile writers research is not a cost center, it is where the takes come from; the wiki's value decays after build-out, the >$1M ARR band already has staff and AlphaSense-class tools, and the $5-50K band churns on cash flow and the month-4 realization that free scheduled tasks + a Notion doc gets 70% of this. Finally, identical angle suggestions across 30 newsletters on the same beat homogenizes the differentiation customers are selling — the product erodes its own customers' moat.
+
+## Recommended Tech Stack & Unit Economics
+
+Ingestion: own RSS/Atom + sitemap diff poller (near-free) with content-hash dedup; Firecrawl or Zyte for JS-heavy/anti-bot pages; free primary feeds (SEC EDGAR full-text, Federal Register, EUR-Lex, GovInfo, court RSS); entry-tier transcript API (Finnhub/API Ninjas ~$50-150/mo shared) — skip X or pass through the customer's own API key; YouTube captions API. Archive memory: ingest public archive RSS/exports, chunk + embed (Voyage-3 or text-embedding-3-large), pgvector on Postgres (Neon/Supabase); novelty = cosine-sim against archive + all prior brief items with an LLM tiebreak. Triage: Gemini Flash or Claude Haiku 4.5 via Batch API (50% discount) with structured outputs for novelty/slop/source-quality scoring. Synthesis: Claude Sonnet 4.6 (or GPT-5-class) with prompt caching for the morning brief + wiki diffs. Citation grounding: verbatim-quote extraction with post-hoc exact string-match verification against fetched HTML — reject any quote that fails match; store quote + URL + timestamp + content hash (this gets precision to ~99%; recall remains unguaranteed and should never be promised). Orchestration: Inngest or Temporal nightly DAGs per customer timezone; SQS-grade queue fine for v1. Surface: Next.js workspace, Postmark/Resend email, Slack app; Notion/Google Docs export APIs; Substack draft export via browser automation (fragile, no official API). Unit economics per $99 pro user (15 beats, ~1,500 nightly source checks): crawl/proxy $10-40, batch triage $5-10, synthesis w/ caching $8-25, embeddings/storage $1-3, email/infra $2 = $25-80/mo COGS → 20-75% gross margin on commodity-source coverage; adding real X/transcript/paywall coverage pushes COGS past $100/user and breaks the model. Viable as a 2-3 person niche business at $49-99/mo targeting $1-3M ARR; not venture-defensible.
+
+---
+
+*Generated 2026-06-10 from a multi-agent research pipeline: 4/5 live-web research agents (product landscape, B2B intel market, tech economics, demand signals; the Karpathy-quotes agent stalled), 3-lens ideation (B2B radars, living wikis, prosumer auto-research), shortlist, then per-candidate monetization analyst + platform-risk skeptic. Market figures are agent-researched estimates — verify before committing capital.*

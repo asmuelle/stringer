@@ -1,0 +1,73 @@
+[
+  {
+    "id": "s_fedreg",
+    "name": "Federal Register: AI documents",
+    "kind": "federal_register",
+    "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=artificial+intelligence",
+    "lastContentHash": null
+  },
+  {
+    "id": "s_eurlex",
+    "name": "EUR-Lex: latest legislation RSS",
+    "kind": "eurlex",
+    "url": "https://eur-lex.europa.eu/EN/display-feed.rss?myRssId=eu-ai",
+    "lastContentHash": null
+  },
+  {
+    "id": "s_wire",
+    "name": "Tech policy wire (RSS)",
+    "kind": "rss",
+    "url": "https://techpolicywire.example/feed",
+    "lastContentHash": null
+  },
+  {
+    "id": "s_court",
+    "name": "CJEU docket RSS",
+    "kind": "court",
+    "url": "https://curia.example/rss/dockets",
+    "lastContentHash": null
+  },
+  {
+    "id": "s_govinfo",
+    "name": "GovInfo bulk data",
+    "kind": "govinfo",
+    "url": "https://api.govinfo.gov/collections",
+    "lastContentHash": "df5cd49aac41879c46239e9f521148e6cd778027e07338044870c4804013a42e"
+  },
+  {
+    "id": "s_edgar",
+    "name": "SEC EDGAR filings",
+    "kind": "edgar",
+    "url": "https://efts.sec.gov/LATEST/search-index?q=%22artificial+intelligence%22",
+    "lastContentHash": null,
+    "simulateFailure": true
+  },
+  {
+    "id": "s_aiweekly",
+    "name": "AI policy weekly (RSS)",
+    "kind": "rss",
+    "url": "https://aipolicyweekly.example/feed",
+    "lastContentHash": null
+  },
+  {
+    "id": "s_lobby",
+    "name": "Transparency register updates",
+    "kind": "rss",
+    "url": "https://lobbyregister.example/feed",
+    "lastContentHash": null
+  },
+  {
+    "id": "s_courtwatch",
+    "name": "National court watch",
+    "kind": "court",
+    "url": "https://courtwatch.example/rss",
+    "lastContentHash": null
+  },
+  {
+    "id": "s_ep_press",
+    "name": "European Parliament press RSS",
+    "kind": "rss",
+    "url": "https://europarl.example/press/feed",
+    "lastContentHash": null
+  }
+]
