@@ -2,18 +2,7 @@
 
 > An always-on research desk for paid-newsletter operators: living beat wikis plus a daily citation-pinned delta brief, deduplicated against everything you have already published — turning 20 hours of weekly research into 2 without ever pitching a story you already covered.
 
-**Category:** LLM wiki / auto-research (living documents + delta alerts, à la Karpathy) · **Status:** 🟡 Tier 2 — strong economics, must outrun ChatGPT/Perplexity feature-shipping
-
-## Scorecard
-
-| Metric | Score |
-|---|---|
-| Rank (of 12 finalists) | #9 |
-| Combined score | 2.2 |
-| Monetization potential (1-10) | 7 |
-| Feasibility (1-10) | 5 |
-| Defensible vs platform features | No |
-| Skeptic verdict | weakened |
+**Category:** LLM wiki / auto-research (living documents + delta alerts, à la Karpathy) 
 
 ## Concept
 
