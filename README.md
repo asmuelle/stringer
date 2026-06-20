@@ -2,7 +2,7 @@
 
 > An always-on research desk for paid-newsletter operators: living beat wikis plus a daily citation-pinned delta brief, deduplicated against everything you have already published — turning 20 hours of weekly research into 2 without ever pitching a story you already covered.
 
-**Category:** LLM wiki / auto-research (living documents + delta alerts, à la Karpathy) 
+**Category:** LLM wiki / auto-research (living documents + delta alerts, à la Karpathy)
 
 ## Concept
 
@@ -28,7 +28,6 @@ Substack's paid boom concentrated in exactly the business/finance/politics/tech 
 
 Feedly's real monitoring tier ($14.4-19.2K/yr enterprise MI), Particle ($2.99 consumer catch-up), generic ChatGPT/Perplexity (one-shot, no beat memory, 37% citation misattribution — career-ending under your own byline), human VAs at $1-3K/mo.
 
-
 ## Comparables
 
 - Feedly Market Intelligence — $1,600/mo Standard, $2,400/mo Advanced, billed annually ($19.2-28.8K/yr); the enterprise monitoring price ceiling
@@ -39,7 +38,6 @@ Feedly's real monitoring tier ($14.4-19.2K/yr enterprise MI), Particle ($2.99 co
 - Meltwater / Brandwatch / Talkwalker — custom quotes, typically $1,000+/mo enterprise media intelligence
 - Human VA/researcher — $1-3K/mo, the manual alternative Stringer displaces
 - Substack platform economics (payer health) — 8.4M paid subs Q1 2026 (+68% YoY), $45M platform revenue 2025 via 10% take, ~45-50 newsletters >$1M ARR
-
 
 ## Tech Stack & Unit Economics
 

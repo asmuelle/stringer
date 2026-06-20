@@ -1,12 +1,4 @@
-import {
-  boolean,
-  integer,
-  pgEnum,
-  pgTable,
-  real,
-  text,
-  timestamp,
-} from 'drizzle-orm/pg-core';
+import { boolean, integer, pgEnum, pgTable, real, text, timestamp } from 'drizzle-orm/pg-core';
 
 /** Source kinds are an allowlist (PRODUCT INVARIANT #6) enforced at the type level. */
 export const sourceKindEnum = pgEnum('source_kind', [

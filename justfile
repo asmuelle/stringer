@@ -47,6 +47,10 @@ lint: _guard
 format: _guard
     pnpm format
 
+# verify formatting (prettier --check); CI gate
+format-check: _guard
+    pnpm run format:check
+
 # Type-check the workspace (tsc --noEmit)
 typecheck: _guard
     pnpm typecheck
@@ -55,5 +59,9 @@ typecheck: _guard
 build: _guard
     pnpm build
 
-# Full CI gate: lint + typecheck + test + build (mirrors GitHub Actions)
-ci: lint typecheck test build
+# audit dependencies for high+ severity advisories; CI gate
+audit: _guard
+    pnpm audit --audit-level=high
+
+# Full CI gate: lint + format-check + typecheck + test + build + audit (mirrors GitHub Actions)
+ci: lint format-check typecheck test build audit

@@ -16,30 +16,30 @@ Current state: M0 bootstrapped + M1 fixture slice. The pnpm workspace (apps/web,
 
 Always use `just` recipes — never raw pnpm/docker invocations. The justfile is the single source of truth; until M0 lands, bootstrapped-only recipes fail with a helpful message.
 
-| Recipe | Purpose |
-|---|---|
-| `just` | List all recipes |
-| `just setup` | corepack enable + pnpm install |
-| `just dev` | Run the dev servers (web + Inngest dev) |
-| `just db-up` / `just db-down` | Start/stop local Postgres (pgvector) via docker compose |
-| `just migrate` | Apply Drizzle migrations |
-| `just test` | Unit/integration tests (vitest) |
-| `just e2e` | Playwright end-to-end tests |
-| `just lint` / `just format` | ESLint / Prettier |
-| `just typecheck` | tsc --noEmit across the workspace |
-| `just build` | Production build |
-| `just ci` | lint + typecheck + test + build (what GitHub Actions runs) |
+| Recipe                        | Purpose                                                    |
+| ----------------------------- | ---------------------------------------------------------- |
+| `just`                        | List all recipes                                           |
+| `just setup`                  | corepack enable + pnpm install                             |
+| `just dev`                    | Run the dev servers (web + Inngest dev)                    |
+| `just db-up` / `just db-down` | Start/stop local Postgres (pgvector) via docker compose    |
+| `just migrate`                | Apply Drizzle migrations                                   |
+| `just test`                   | Unit/integration tests (vitest)                            |
+| `just e2e`                    | Playwright end-to-end tests                                |
+| `just lint` / `just format`   | ESLint / Prettier                                          |
+| `just typecheck`              | tsc --noEmit across the workspace                          |
+| `just build`                  | Production build                                           |
+| `just ci`                     | lint + typecheck + test + build (what GitHub Actions runs) |
 
 ## Architecture Summary
 
 pnpm workspace where data flows **source → diff → triage → synthesis → surface**: nightly Inngest DAGs poll feeds, hash-dedup and diff content, band each item by embedding distance against the operator's archive + prior briefs (cheap-model LLM tiebreak only in the ambiguous band), synthesize one prompt-cached frontier call per beat, verify every pull-quote by exact string match, then deliver an email/Slack brief and update the beat wiki. Deterministic code does everything it can before a single LLM token is spent.
 
-| Module | Role |
-|---|---|
-| `apps/web` | Next.js 15 App Router workspace (wikis, briefs, draft pulls, settings) |
-| `packages/core` | Pure TS domain logic, zero IO — novelty banding, quote matching, brief validation, cost accounting |
-| `packages/pipeline` | Inngest functions — fetch/diff, embeddings, batch triage, synthesis, delivery, exports |
-| `packages/db` | Drizzle schema + migrations, pgvector queries (always operator-scoped) |
+| Module              | Role                                                                                               |
+| ------------------- | -------------------------------------------------------------------------------------------------- |
+| `apps/web`          | Next.js 15 App Router workspace (wikis, briefs, draft pulls, settings)                             |
+| `packages/core`     | Pure TS domain logic, zero IO — novelty banding, quote matching, brief validation, cost accounting |
+| `packages/pipeline` | Inngest functions — fetch/diff, embeddings, batch triage, synthesis, delivery, exports             |
+| `packages/db`       | Drizzle schema + migrations, pgvector queries (always operator-scoped)                             |
 
 ## Coding Standards
 
@@ -55,7 +55,7 @@ pnpm workspace where data flows **source → diff → triage → synthesis → s
 
 - **TDD**: write the failing test first, then the minimal implementation, then refactor. Target 80%+ coverage; `packages/core` should sit well above it.
 - **AAA pattern** (Arrange–Act–Assert) with behavior-describing names.
-- What matters most *for this product*, in order:
+- What matters most _for this product_, in order:
   1. **Invariant tests** — the Product Invariants below, each encoded as an automated test.
   2. **Novelty engine unit tests** in `core` — band routing, threshold edges, nearest-neighbor evidence attachment, callback resolution. Build an eval-case corpus from real false-novel feedback.
   3. **Quote verification tests** — exact-match acceptance, whitespace normalization, rejection paths, "unverified quote cannot render" structural tests.

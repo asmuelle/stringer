@@ -106,8 +106,7 @@ export class MockTriageLlm implements TriageLlm {
  * A quote the mock synthesizer always fabricates, proving the verification gate
  * rejects hallucinated quotes end-to-end. It appears in no fixture text.
  */
-export const FABRICATED_QUOTE =
-  'Officials privately concede the entire framework is unworkable.';
+export const FABRICATED_QUOTE = 'Officials privately concede the entire framework is unworkable.';
 
 /**
  * Deterministic stand-in for the cached Sonnet synthesis call. Emits, per item,

@@ -7,7 +7,10 @@ export interface TextDiff {
 }
 
 const splitLines = (text: string): readonly string[] =>
-  text.split('\n').map((line) => line.trim()).filter((line) => line.length > 0);
+  text
+    .split('\n')
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0);
 
 /** Longest-common-subsequence table over lines. Inputs are small (single articles). */
 function lcsTable(a: readonly string[], b: readonly string[]): number[][] {

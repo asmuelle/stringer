@@ -26,9 +26,9 @@ describe('copy lint (invariant #3: never promise recall)', () => {
 
 describe('renderTemplate', () => {
   test('fills placeholders', () => {
-    expect(renderTemplate(copyTemplates.emailSubject, { beatName: 'EU AI', date: '2026-06-10' })).toBe(
-      'EU AI — 2026-06-10 brief',
-    );
+    expect(
+      renderTemplate(copyTemplates.emailSubject, { beatName: 'EU AI', date: '2026-06-10' }),
+    ).toBe('EU AI — 2026-06-10 brief');
   });
 
   test('throws on missing variables instead of leaving gaps', () => {

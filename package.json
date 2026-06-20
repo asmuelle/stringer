@@ -8,10 +8,11 @@
   },
   "scripts": {
     "dev": "pnpm --filter @stringer/web dev",
-    "test": "vitest run",
+    "test": "vitest run --coverage",
     "e2e": "pnpm --filter @stringer/web e2e",
     "lint": "eslint .",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "typecheck": "pnpm -r run typecheck",
     "build": "pnpm --filter @stringer/web build"
   },

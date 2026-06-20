@@ -67,7 +67,11 @@ describe('verifyQuote', () => {
   });
 
   test('span indexes back into the normalized page text exactly', () => {
-    const result = verifyQuote(candidate('Brussels confirmed the delay on Tuesday.'), page, context);
+    const result = verifyQuote(
+      candidate('Brussels confirmed the delay on Tuesday.'),
+      page,
+      context,
+    );
     if (isVerifiedQuote(result)) {
       const normalizedPage = page.replace(/\s+/g, ' ').trim();
       expect(normalizedPage.slice(result.span.start, result.span.end)).toBe(result.text);

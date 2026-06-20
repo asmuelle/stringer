@@ -27,9 +27,7 @@ describe('nightly fixture slice (M1)', () => {
   test('routes at least one ambiguous item through the batch tiebreak', async () => {
     const { result, triageCalls } = await runFixtureSlice();
     expect(triageCalls.length).toBeGreaterThanOrEqual(1);
-    const tiebroken = result.brief.items.find(
-      (item) => item.novelty.decidedBy === 'llm_tiebreak',
-    );
+    const tiebroken = result.brief.items.find((item) => item.novelty.decidedBy === 'llm_tiebreak');
     expect(tiebroken).toBeDefined();
     expect(tiebroken?.novelty.evidence?.neighborId).toBe('a2');
   });
@@ -57,9 +55,7 @@ describe('nightly fixture slice (M1)', () => {
     expect(result.brief.coverage.sourcesChecked).toBe(10);
     expect(result.brief.coverage.sourcesDegraded).toBe(1);
     expect(result.brief.coverage.degradedSourceNames).toEqual(['SEC EDGAR filings']);
-    expect(result.brief.coverage.text).toBe(
-      'Checked 10 sources; 1 degraded (SEC EDGAR filings).',
-    );
+    expect(result.brief.coverage.text).toBe('Checked 10 sources; 1 degraded (SEC EDGAR filings).');
   });
 
   test('pipeline_run shows spend per tier and lands under $0.50 for the beat-night', async () => {

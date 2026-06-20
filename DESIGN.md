@@ -5,7 +5,7 @@
 
 ## Thesis
 
-The morning-brief format is validated (ChatGPT Pulse at $200/mo proves demand), but no horizontal player computes novelty against an individual writer's own published archive *plus* everything already briefed — and that brief-state memory compounds into a switching cost the writer feels every morning. Cost discipline makes it profitable: deterministic hash/diff/embedding gates run before any LLM token is spent, cheap batch models triage, and the frontier model writes exactly one cached synthesis per beat per night — so 200-source overnight coverage works at $49–119/mo where per-query tools burn frontier tokens. Trust is engineered, not promised: every pull-quote is string-match verified against fetched content, every novelty flag carries nearest-neighbor evidence, and coverage gaps are reported in the brief footer, never hidden.
+The morning-brief format is validated (ChatGPT Pulse at $200/mo proves demand), but no horizontal player computes novelty against an individual writer's own published archive _plus_ everything already briefed — and that brief-state memory compounds into a switching cost the writer feels every morning. Cost discipline makes it profitable: deterministic hash/diff/embedding gates run before any LLM token is spent, cheap batch models triage, and the frontier model writes exactly one cached synthesis per beat per night — so 200-source overnight coverage works at $49–119/mo where per-query tools burn frontier tokens. Trust is engineered, not promised: every pull-quote is string-match verified against fetched content, every novelty flag carries nearest-neighbor evidence, and coverage gaps are reported in the brief footer, never hidden.
 
 ## Architecture
 
@@ -13,12 +13,12 @@ Monorepo (pnpm workspace), pipeline-first. Data flows **source → diff → tria
 
 ### Module map
 
-| Package | Role |
-|---|---|
-| `apps/web` | Next.js 15 (App Router, TS strict). Beat wikis, brief archive, draft pulls, onboarding, settings, citations page. |
-| `packages/core` | Pure TS domain logic, zero IO. Novelty banding, quote verification matcher, brief assembly + validation, cost accounting, chunking. The most-tested package. |
-| `packages/pipeline` | Inngest functions: fetch/diff workers, embedding jobs, batch triage, synthesis, delivery (email/Slack), exports. All IO lives here, calling into `core`. |
-| `packages/db` | Drizzle ORM schema + migrations, Postgres + pgvector queries (always operator-scoped). Package name `@stringer/db`. |
+| Package             | Role                                                                                                                                                         |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `apps/web`          | Next.js 15 (App Router, TS strict). Beat wikis, brief archive, draft pulls, onboarding, settings, citations page.                                            |
+| `packages/core`     | Pure TS domain logic, zero IO. Novelty banding, quote verification matcher, brief assembly + validation, cost accounting, chunking. The most-tested package. |
+| `packages/pipeline` | Inngest functions: fetch/diff workers, embedding jobs, batch triage, synthesis, delivery (email/Slack), exports. All IO lives here, calling into `core`.     |
+| `packages/db`       | Drizzle ORM schema + migrations, Postgres + pgvector queries (always operator-scoped). Package name `@stringer/db`.                                          |
 
 **Scheduling choice: Inngest** (not Temporal). Rationale: a 2–3 person team should not operate a Temporal cluster; Inngest gives per-customer-timezone cron, step retries, fan-out, and batching as a managed service with a local dev server, and the nightly DAG (fetch → triage → synthesize → deliver) maps 1:1 onto Inngest steps. Revisit only if we need long-lived (>24h) human-in-the-loop workflows.
 
@@ -26,7 +26,7 @@ Monorepo (pnpm workspace), pipeline-first. Data flows **source → diff → tria
 
 1. **Deterministic code (free):** RSS/sitemap polling, content-hash dedup, text diffing, embedding cosine distance, novelty band routing, exact-string quote verification, scheduling, exports, coverage accounting.
 2. **Embeddings (cheap, cached):** Voyage-3 (or text-embedding-3-large) for archive chunks, brief history, and incoming items. Embed once per content hash, never re-embed unchanged content.
-3. **Cheap model, Batch API (Claude Haiku 4.5 or Gemini Flash, 50% batch discount):** novelty tiebreak *only* for items inside the ambiguity band, slop/source-quality scoring, entity extraction for wiki updates. Structured outputs, per-item.
+3. **Cheap model, Batch API (Claude Haiku 4.5 or Gemini Flash, 50% batch discount):** novelty tiebreak _only_ for items inside the ambiguity band, slop/source-quality scoring, entity extraction for wiki updates. Structured outputs, per-item.
 4. **Frontier model (Claude Sonnet 4.6, prompt-cached):** morning brief synthesis, wiki section diffs, three suggested angles. Exactly one synthesis call per beat per night with the beat wiki as a cached prefix. Never called per source item.
 
 ### Novelty engine (the core mechanic)
@@ -37,7 +37,7 @@ For each surviving source item: nearest-neighbor cosine distance against (a) the
 - distance > `T_novel` → **novel**: pass straight to triage scoring.
 - `T_dup` ≤ distance ≤ `T_novel` → **ambiguous**: cheap-model LLM tiebreak via Batch API with both texts in context.
 
-Thresholds are config (per operator, tunable from false-novel feedback), not constants buried in code. Every decision stores the nearest-neighbor id + distance so the UI can show *why*.
+Thresholds are config (per operator, tunable from false-novel feedback), not constants buried in code. Every decision stores the nearest-neighbor id + distance so the UI can show _why_.
 
 ## Data Model Sketch
 
@@ -59,7 +59,7 @@ Thresholds are config (per operator, tunable from false-novel feedback), not con
 1. Operator signs up, pastes their publication URL (Substack/Beehiiv/Ghost).
 2. Pipeline discovers the public archive RSS/sitemap; operator can also upload a platform export for full history.
 3. Each post is fetched, cleaned, chunked, embedded (Voyage-3), stored in pgvector scoped to operator_id.
-4. Operator sees "archive memory built: N posts, dates X–Y" before defining a single beat — the dedup memory exists *before* the first invoice (free during 14-day trial, per the revenue plan).
+4. Operator sees "archive memory built: N posts, dates X–Y" before defining a single beat — the dedup memory exists _before_ the first invoice (free during 14-day trial, per the revenue plan).
 
 ### 2. Nightly pipeline (per beat, per operator timezone)
 
@@ -94,7 +94,7 @@ Thresholds are config (per operator, tunable from false-novel feedback), not con
 
 **Wire-desk editorial.** The product should feel like a wire-service terminal crossed with a broadsheet — built for people whose job is words, not a generic SaaS dashboard.
 
-- **Palette:** warm newsprint surface (`oklch(96% 0.01 90)`), near-black ink (`oklch(20% 0.01 60)`), one semantic accent — wire red (`oklch(55% 0.19 25)`) used *only* for deltas/novelty markers, never decoration. Degraded-source amber as the single secondary semantic color.
+- **Palette:** warm newsprint surface (`oklch(96% 0.01 90)`), near-black ink (`oklch(20% 0.01 60)`), one semantic accent — wire red (`oklch(55% 0.19 25)`) used _only_ for deltas/novelty markers, never decoration. Degraded-source amber as the single secondary semantic color.
 - **Typography:** sharp editorial serif for headlines and brief prose (Source Serif 4 or Tiempos-class), IBM Plex Mono for timestamps, URLs, content hashes, and citation metadata. Dense broadsheet hierarchy: big scale contrast between headline, deck, and metadata lines.
 - **Texture & motion:** hairline column rules, redline-style strike/insert marks for wiki diffs, subtle paper grain on the workspace background. Motion limited to reveal-on-update of changed wiki sections (transform/opacity only).
 - **Email brief** mirrors the same system in HTML email constraints: serif headlines, mono citation lines, wire-red delta bars.
@@ -128,7 +128,7 @@ Stripe checkout + customer portal; tiers per the recommended revenue model: $49 
 ## Risks & Mitigations (from the adversarial review)
 
 1. **Horizontals ship the generic version** (Pulse rolling to the $20 Plus tier; all labs ship scheduled tasks). → Compete only on what they won't build for tens of thousands of users: per-writer archive dedup, verified citation pinning, export into the publishing loop. M2 ships before any growth spend; the demo is "it knew I'd covered this," not "it summarizes news."
-2. **The public archive is not a moat — anyone can re-ingest RSS.** → Treat the *real* proprietary state — brief history ("what we already showed you"), threshold tuning from feedback, and the corrections log — as first-class product, accumulating from day one of trial. Deepen workflow embedding (draft pulls, corrections, citations page) so leaving costs workflow, not just data.
+2. **The public archive is not a moat — anyone can re-ingest RSS.** → Treat the _real_ proprietary state — brief history ("what we already showed you"), threshold tuning from feedback, and the corrections log — as first-class product, accumulating from day one of trial. Deepen workflow embedding (draft pulls, corrections, citations page) so leaving costs workflow, not just data.
 3. **Source-access scissors:** the differentiating sources (paywalls, X, Cloudflare-blocked sites) are exactly the costly/blocked ones. → Build the honest product on verifiably free primary feeds (EDGAR, Federal Register, EUR-Lex, GovInfo, court RSS) where lawyers/finance/policy writers genuinely need monitoring; X only via customer-supplied keys (passthrough, encrypted); blocked sources surface as `degraded` in the coverage footer. Never sell coverage we cannot deliver.
 4. **Trust is asymmetrically fragile** (one false-novel or one miss resets trust; recall is unmeasurable). → Never promise recall anywhere in product copy (enforced by test); every novelty flag is explainable with nearest-neighbor evidence; coverage footer makes the watched/failed set explicit; false-novel feedback is one click and visibly improves the next brief. Position as safety net + accelerant, not a replacement for the writer's judgment.
 5. **COGS blowout breaks the margin model** (real coverage pushing past $100/user). → The cost-discipline ladder is an invariant, not an aspiration: deterministic gates before every LLM call, Batch API for all triage, one cached frontier call per beat-night, per-beat budget caps that pause-and-notify. pipeline_run cost accounting ships in M1, before there are customers to lose money on.
