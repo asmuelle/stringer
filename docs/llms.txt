@@ -1,0 +1,39 @@
+# Stringer
+
+> Stringer is an always-on research desk for paid-newsletter operators: living beat wikis plus a daily, citation-pinned delta brief, deduplicated against everything you have already published. Turn 20 hours of weekly research into 2 — without re-pitching a story you already ran.
+
+## What it is
+
+Stringer watches your beats overnight, then files one citation-pinned delta brief each morning — deduplicated against everything you've ever published. Every lead carries a pinned quote, URL, and timestamp. It is a research and monitoring tool, not a newswire or a guarantee of completeness.
+
+## Who it's for
+
+Paid-newsletter operators in business, finance, policy, and tech — including operators on Substack, Beehiiv, and Ghost. The buyer is a writer worth $50–100/hour who saves ten-plus hours a week. Stringer is an independent product and is not affiliated with Substack, Beehiiv, or Ghost.
+
+## Key features
+
+- Living beat wikis: define a beat and Stringer keeps a living wiki of entities, narrative timelines, and open questions, diff-updated overnight.
+- Delta engine: cheap-model triage scores every item for novelty against your archive and every prior brief, filters slop, and ranks by source quality.
+- Citation pinning: every pull-quote is extracted verbatim and exact-string matched against the fetched page; if the quote doesn't match the source, it's rejected. Each surviving quote keeps its URL, timestamp, and content hash.
+- Callbacks: links new developments to your own past coverage so a story reads as a follow-up, not a re-run.
+- Sources & surface: RSS/Atom and sitemaps plus free primary sources — SEC EDGAR, the Federal Register, EUR-Lex, GovInfo, and court feeds. The brief arrives by email or Slack; one click pulls any wiki section into Notion, Google Docs, or a newsletter draft.
+
+## Pricing
+
+Indicative pricing, set ahead of launch; plans scale by beats, not seats.
+
+- Solo — $49/mo: For the single-handed operator running one or two beats. Up to 5 beats, daily delta brief (email/Slack), living beat wikis, citation pinning & verify.
+- Pro — $119/mo: Archive-aware dedup and deeper sources. Up to 15 beats, archive-aware dedup memory, transcript & primary-filing sources, one-click draft pulls & export.
+- Desk — $299/mo: Small teams who share beats. Everything in Pro, team seats & shared wikis, API access, white-label public citations page.
+- Institutional — $499+/mo: Finance & policy desks needing filings and earnings-transcript beats. Everything in Desk, filings & transcript-heavy beats, priority source onboarding, scoped to your licensed sources.
+
+## FAQ highlights
+
+- Sources: Stringer monitors what it can fetch and cite cleanly (RSS/Atom, sitemaps, and free primary sources). Heavily paywalled outlets, locked social platforms, and licensed terminals are not openly crawlable.
+- Accuracy: Pull-quotes are machine-verified against the live page; non-matching quotes are dropped. You should always verify before you publish — your byline is on the claim.
+- Completeness: Recall across a beat is never guaranteed; treat Stringer as a force-multiplier for your judgment, not a replacement.
+- Dedup: Memory is built from your published archive plus every item already shown to you, computed against that private record. It is specific to what you have published.
+
+## Link
+
+- Home: https://asmuelle.github.io/stringer/
