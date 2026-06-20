@@ -3,6 +3,7 @@
     "strict": true,
     "target": "ES2022",
     "lib": ["ES2023"],
+    "types": ["node"],
     "module": "ESNext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
