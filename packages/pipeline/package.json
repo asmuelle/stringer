@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "@stringer/core": "workspace:*",
-    "zod": "^3.25.76"
+    "zod": "^4.4.3"
   }
 }
