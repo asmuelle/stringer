@@ -1,5 +1,7 @@
 # Stringer
 
+[![CI](https://github.com/asmuelle/stringer/actions/workflows/ci.yml/badge.svg)](https://github.com/asmuelle/stringer/actions/workflows/ci.yml)
+
 > An always-on research desk for paid-newsletter operators: living beat wikis plus a daily citation-pinned delta brief, deduplicated against everything you have already published — turning 20 hours of weekly research into 2 without ever pitching a story you already covered.
 
 **Category:** LLM wiki / auto-research (living documents + delta alerts, à la Karpathy)
