@@ -12,9 +12,9 @@
   "dependencies": {
     "@stringer/core": "workspace:*",
     "@stringer/pipeline": "workspace:*",
-    "next": "^16.2.9",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "next": "^16.2.11",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
     "@playwright/test": "^1.61.1",
